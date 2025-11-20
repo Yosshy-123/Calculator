@@ -75,6 +75,7 @@ function handleOp(op) {
 		if (op === '-') {
 			left = '0';
 			operator = op;
+			finished = !1;
 			render()
 		}
 		return
@@ -92,7 +93,8 @@ function handleOp(op) {
 		operator = op;
 		finished = !1
 	} else {
-		operator = op
+		operator = op;
+		finished = !1
 	}
 	render()
 }
