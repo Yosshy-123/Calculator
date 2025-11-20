@@ -13,8 +13,7 @@ function stripTrailingDot(s) {
 }
 
 function render() {
-	const dispLeft = stripTrailingDot(left);
-	resultEl.textContent = (dispLeft === '' ? '0' : (operator && right ? right : (finished ? dispLeft : dispLeft)));
+	resultEl.textContent = (left === '' ? '0' : (operator && right ? right : (finished ? left : left)));
 	smallEl.textContent = buildExpression()
 }
 
